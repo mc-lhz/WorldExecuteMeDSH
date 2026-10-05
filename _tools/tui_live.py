@@ -3506,7 +3506,7 @@ def main() -> None:
                 elif ch == " ":
                     playing = not playing
                     if audio.ok:
-                        (audio.play if playing else audio.pause)(t)
+                        audio.play(t) if playing else audio.pause()
                 elif ch in ("m", "M"):
                     audio.mute()
                 elif ch in ("h", "H"):
